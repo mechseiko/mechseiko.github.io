@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHANA | HOME PAGE</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="homeDesktopStyle.css">
+    <link rel="stylesheet" href="homeMobileStyle.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="header-footer.css">
+</head>
+<body>
+    <!-- HOME PAGE -->
+    <div id="home">
+        <header class="flex">
+            <a href="Index.html"><img src="logo.png" alt="logo"></a>
+            <a href="Index.html"><h1>SHANA</h1></a>
+
+            <nav id="desktop">
+                <ul class="flex">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Timetable.html">Timetable</a></li>
+                    <li><a href="Tasks.html">Tasks</a></li>
+                    <li><a target="_blank" href="https://wa.me/2348080296575">Developer</a></li>
+                </ul>
+            </nav>
+            <img id="ham" src="ham.svg" alt="ham_icon">
+        </header>
+
+        <!-- -----------MOBILE NAVBAR GOES HERE -->
+            <nav id="mobile">
+                <ul class="flex">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Timetable.html">Timetable</a></li>
+                    <li><a href="Tasks.html">Tasks</a></li>
+                    <li><a target="_blank" href="https://wa.me/2348080296575">Developer</a></li>
+                </ul>
+            </nav>
+        <!-- ----------MOBILE NAVBAR GOES HERE -->
+
+
+        <main>
+            <!-- GET GRADES SECTION -->
+            <section id="good">
+                <h1>Get the good grades you've always desired!</h1>
+            </section>
+
+           <!-- EARTH SECTION -->
+            <section id="earth" class="flex">
+                <div id="wherever">
+                    <h1>Wherever you are</h1>
+                    <div class="flex">
+                        <a href="Study.html"><button>Get Started</button></a>
+                        <a href="Index.html"><img id="google-play_img" src="google-play.png" alt="google-play_img"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="earth.jpg" alt="earth_img">
+                </div>
+            </section>
+
+            <!-- STUDENTS SECTION -->
+            <section id="students" class="flex">
+                <div>
+                    <img src="students2_1.jpg" alt="students2_1_img">
+                </div>
+                <div>
+                    <h1 style="animation:onScrollEffectRight 2s linear 1s 1;">Made for students all over the world</h1>
+                </div>
+            </section>
+
+            <hr>
+            <!-- CARDS SECTION -->
+            <section id="cards">
+                <h1 style="animation:onScrollEffectLeft 2s linear 2s 1;">ACE all quizzes, tests and exams easily</h1>
+                <div class="flex" id="aceCards">
+                    <img src="aceclub.png" alt="aceclub_img">
+                    <img src="acediamond.png" alt="acediamond_img">
+                    <img src="acespade.png" alt="acespade_img">
+                    <img src="aceheart.png" alt="aceheart_img">
+                </div>
+            </section>
+            
+            <!-- WHYSHANA SECTION -->
+            <section id="whyShana">
+                <video autoplay loop>
+                    <source src="video.webm" type="video/webm"></source>
+                </video>
+                <div>
+                    <article>
+                        <img src="why_timetable.jpg" alt="why_timetable_img">
+                        <h2>Easily upload and update test and exam <a href="Timetable.html">timetables</a></h2>
+                    </article>
+                    <article>
+                        <h2>Make a <a href="Tasks.html">to-do-list</a> and manage time effectively</h2>
+                        <img src="why_tasks.jpg" alt="why_tasks_img">
+                    </article>
+                </div>
+            </section>
+
+            <!-- BUTTONS SECTION -->
+            <section>
+                <div id="buttons" class="flex">
+                    <a href="Study.html"><button>Get Started</button></a>
+                    <a href="Index.html"><img id="google-play_img" src="google-play.png" alt="google-play_img"></a>
+                </div>
+            </section>
+
+            <!-- MECHSEIKO SECTION -->
+            <section>
+                <h1 style="text-align: left;">As imagined by</h1>
+                <div>
+                    <img src="mech.jpg" alt="mech_img">
+                </div>
+                
+            </section>
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer style="text-align: center;">
+            <hr style="margin-bottom: 15px;">
+            <a href="Index.html"><img style="height: 120px;border-radius: 50%;" src="logo.png" alt="logo"></a>
+            <h3 style="margin-top: 15px;">Developed by <a target="_blank" href="https://wa.me/2349121945434">MECHSEIKO</a></h3>
+            <h2 style="margin-top: 5px;" id="coy"></h2>
+        </footer>
+    </div>
+
+
+    <!-- INTRO PAGE -->
+    <div id="intro">
+        <div id="progress">
+            <h1>SHANA</h1>
+            <progress></progress>
+        </div>
+        <h3>Developed by <a target="_blank" href="https://wa.me/2349121945434">MECHSEIKO</a></h3>
+        <h2 id="copy"></h2>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

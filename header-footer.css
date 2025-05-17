@@ -1,0 +1,103 @@
+
+/* HEADER DESKTOP*/
+header{
+    padding: 20px;
+    position: sticky;
+    top: -1px;
+    z-index: 2;
+    background-color: black;
+    justify-content: space-between;
+    border-bottom: 1.5px solid hsl(90, 90%, 90%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-bottom: 20px;
+}
+header img:not(img#ham){
+    height: 80px;
+    border-radius: 50%;
+}
+header h1{
+    font-size: 60px;
+    color: pink;
+}
+nav#desktop{
+    margin-top: 10px;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style-type: none;
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+}
+nav a, footer a{
+    color: skyblue;
+}
+nav#desktop a:hover{
+    background-color: pink;
+    color: black;
+    padding: 9px;
+    letter-spacing: 1.5px;
+    border-radius: 15px;
+}
+nav#desktop li:hover{
+    transform: skew(15deg);
+    transform: rotate(20deg);
+}
+img#ham{
+    display: none;
+}
+
+
+@media screen and (max-width: 770px) {     
+    /* HEADER MOBILE*/
+    header{
+        padding: 20px;
+        position: sticky;
+        top: -1px;
+        z-index: 2;
+        background-color: black;
+        justify-content: space-between;
+        border-bottom: 1.5px solid hsl(90, 90%, 90%);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        margin-bottom: -5px;
+    }
+    header img:not(img#ham){
+        height: 60px;
+        border-radius: 50%;
+    }
+    header h1{
+        font-size: 40px;
+        color: pink;
+    }
+    nav#desktop{
+        display: none;
+    }
+    img#ham{
+        display: inline;
+        width: 35px;
+        height: 35px;
+        margin-top: 10px;
+    }
+
+
+    /* MOBILE NAVBAR */
+    nav#mobile{
+        text-align: center;
+        background-color: pink;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        position: sticky;
+        top: 90px;
+        z-index: 2;
+    }
+    nav ul li{
+        list-style-type: none;
+        margin: 10px;
+    }
+    nav a{
+        color: hsl(90, 90%, 90%);
+    }
+}

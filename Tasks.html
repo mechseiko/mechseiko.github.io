@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHANA | TASKS PAGE</title>
+    <link rel="stylesheet" href="homeDesktopStyle.css">
+    <link rel="stylesheet" href="homeMobileStyle.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <style>
+        section#toDoList{
+            padding: 40px;
+            border-radius: 30px;
+            color: skyblue;
+        }
+        input{
+            transition: background-color 3s;
+            width: 50%;
+            padding: 15px;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            color: black;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        input:hover{
+            background-color: pink;
+        }
+        button#addButton{
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+        div.flex{
+            margin-top: 20px;
+            justify-content: space-around;
+        }
+        li{
+            margin-bottom: 40px;
+        }
+        ol#delLi{
+            list-style-type: none;
+        }
+        @media screen and (max-width: 770px) {
+            section#toDoList{
+                padding: 0px;
+                border-radius: 30px;
+                color: skyblue;
+            }
+            input{
+                transition: background-color 3s;
+                width: 100%;
+                padding: 15px;
+                border-radius: 20px;
+                outline: none;
+                border: none;
+                color: black;
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            input:hover{
+                background-color: pink;
+            }
+            button#addButton{
+                outline: none;
+                border: none;
+                padding: 10px;
+                border-radius: 20px;
+                margin-bottom: 25px;
+            }
+            div.flex{
+                justify-content: space-around;
+                flex-direction: row;
+            }
+            li{
+                margin-bottom: 20px;
+            }
+            ol#delLi{
+                list-style-type: none;
+                color: black;
+            }
+            ol li button{
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HOME PAGE -->
+    <div id="home">
+        <header class="flex">
+            <a href="Index.html"><img src="logo.png" alt="logo"></a>
+            <a href="Index.html"><h1>SHANA</h1></a>
+
+            <nav id="desktop">
+                <ul class="flex">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Timetable.html">Timetable</a></li>
+                    <li><a href="Tasks.html">Tasks</a></li>
+                    <li><a target="_blank" href="https://wa.me/2348080296575">Developer</a></li>
+                </ul>
+            </nav>
+            <img id="ham" src="ham.svg" alt="ham_icon">
+        </header>
+
+        <!-- -----------MOBILE NAVBAR GOES HERE -->
+            <nav id="mobile">
+                <ul class="flex">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Timetable.html">Timetable</a></li>
+                    <li><a href="Tasks.html">Tasks</a></li>
+                    <li><a target="_blank" href="https://wa.me/2348080296575">Developer</a></li>
+                </ul>
+            </nav>
+        <!-- ----------MOBILE NAVBAR GOES HERE -->
+
+        
+        <main>
+            <section>
+                <h1>Tasks</h1>
+            </section>
+            
+            <section>
+                <article>
+                    <h2>Add and delete <a href="Tasks.html">tasks</a> to improve your daily productivity</h2>
+                    <img src="why_tasks.jpg" alt="why_tasks_img">
+                </article>
+            </section>
+            
+            <section id="toDoList">
+                <form>
+                    <input type="text" placeholder="Add a new task!" required> <br>
+                    <button id="addButton" type="button">Add task</button>
+                </form>
+                <hr>
+                <div class="flex">
+                    <ol></ol>
+                    <ol id="delLi"></ol>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer style="text-align: center;">
+            <hr style="margin-bottom: 15px;">
+            <a href="Index.html"><img style="height: 120px;border-radius: 50%;" src="logo.png" alt="logo"></a>
+            <h3 style="margin-top: 15px;">Developed by <a target="_blank" href="https://wa.me/2349121945434">MECHSEIKO</a></h3>
+            <h2 style="margin-top: 5px;" id="coy"></h2>
+        </footer>
+    </div>
+
+    <script src="generalJS.js"></script>
+    <script>
+        const addButton = document.getElementById("addButton");
+        const ol = document.querySelector("ol");
+        const delLi = document.getElementById("delLi");
+
+        addButton.addEventListener("click", () => {
+            const input = document.querySelector("input")
+            const task = document.createElement("li");
+            const li = document.createElement("li")
+            const delButton = document.createElement("button")
+            if(input.value.split("").length > 0){
+                task.innerHTML = input.value;
+                ol.appendChild(task)
+                delLi.appendChild(li)
+                li.appendChild(delButton)
+                delButton.innerHTML = "Task completed"
+                delButton.addEventListener("click", () => {
+                    delButton.style.display = "none"
+                    task.style.display = "none"
+                })
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHANA | TIMETABLE PAGE</title>
+    <link rel="stylesheet" href="homeDesktopStyle.css">
+    <link rel="stylesheet" href="homeMobileStyle.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <style>
+        main{
+            overflow-x: scroll;
+        }
+        section#timetable{
+            padding: 10px;
+        }
+        table{
+            width: 100%;
+        }
+        table,th,td{
+            border: 3px solid skyblue;
+            border-collapse: collapse;
+            padding: 25px 20px;
+        }
+        th{
+            font-weight: bold;
+            color: lightsalmon;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-bottom: 2px solid pink;
+            font-size: 18px;
+            background: none;
+            outline:none;
+            color: hsl(90, 90%, 90%);
+            padding: 20px;
+        }
+        div.flex{
+            justify-content: center;
+            margin-top: 50px;
+        }
+        button#generateBtn{
+            background-color: salmon;
+        }
+        button#generateBtn:hover{
+            color: red;
+            background-color: chartreuse;
+        }
+        @media screen and (max-width: 770px) {
+            main{
+                overflow-x: scroll;
+            }
+            section#timetable{
+                padding: 10px;
+            }
+            table{
+                width: 100%;
+            }
+            table,th,td{
+                border: 2px solid skyblue;
+                border-collapse: collapse;
+                padding: 7px 3px;
+                font-size: 8px;
+            }
+            th{
+                font-weight: bold;
+                color: lightsalmon;
+            }
+            input{
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-bottom: 1px solid pink;
+                font-size: 8px;
+                background: none;
+                outline: none;
+                color: hsl(90, 90%, 90%);
+                padding: 15px;
+            }
+            input::placeholder{
+                font-size: 8px;
+            }
+            div.flex{
+                justify-content: center;
+                margin-top: 40px;
+            }
+            div.flex button{
+                padding: 5px;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HOME PAGE -->
+    <div id="home">
+        <header class="flex">
+            <a href="Index.html"><img src="logo.png" alt="logo"></a>
+            <a href="Index.html"><h1>SHANA</h1></a>
+
+            <nav id="desktop">
+                <ul class="flex">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Timetable.html">Timetable</a></li>
+                    <li><a href="Tasks.html">Tasks</a></li>
+                    <li><a target="_blank" href="https://wa.me/2348080296575">Developer</a></li>
+                </ul>
+            </nav>
+            <img id="ham" src="ham.svg" alt="ham_icon">
+        </header>
+
+        <!-- -----------MOBILE NAVBAR GOES HERE -->
+            <nav id="mobile">
+                <ul class="flex">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Timetable.html">Timetable</a></li>
+                    <li><a href="Tasks.html">Tasks</a></li>
+                    <li><a target="_blank" href="https://wa.me/2348080296575">Developer</a></li>
+                </ul>
+            </nav>
+        <!-- ----------MOBILE NAVBAR GOES HERE -->
+
+        
+        <main>
+            <section>
+                <h1>Timetable</h1>
+            </section>
+            <section>
+                <article>
+                    <img src="why_timetable.jpg" alt="why_timetable_img">
+                    <h2>Upload and update test and exam <a href="Timetable.html">timetables</a> with ease</h2>
+                </article>
+            </section>
+            <section id="timetable">
+                <article>
+                    <h2>Input course name, code, unit and exam date and time in the provided inputs!.</h2>
+                </article>
+                <table>
+                    <tr>
+                        <th>COURSE NAME</th>
+                        <th>COURSE CODE</th>
+                        <th>COURSE UNIT</th>
+                        <th>EXAM/TEST DATE</th>
+                        <th>EXAM/TEST TIME</th>
+                    </tr>
+                </table>
+                <div class="flex">
+                    <a><button id="addBtn">Add Course</button></a>
+                    <a><button id="removeBtn">Remove Course</button></a>
+                    <a><button id="generateBtn">Generate Timetable</button></a>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer style="text-align: center;">
+            <hr style="margin-bottom: 15px;">
+            <a href="Index.html"><img style="height: 120px;border-radius: 50%;" src="logo.png" alt="logo"></a>
+            <h3 style="margin-top: 15px;">Developed by <a target="_blank" href="https://wa.me/2349121945434">MECHSEIKO</a></h3>
+            <h2 style="margin-top: 5px;" id="coy"></h2>
+        </footer>
+    </div>
+
+    <script src="generalJS.js"></script>
+    <script>
+        const table = document.querySelector("table")
+        const addBtn = document.getElementById("addBtn")
+        const removeBtn = document.getElementById("removeBtn")
+        const generateBtn = document.getElementById("generateBtn")
+
+        addBtn.addEventListener("click", () => {
+            const tr = document.createElement("tr")
+            table.appendChild(tr)
+            function createatd(td) {
+                var td = document.createElement("td")
+                tr.appendChild(td)
+                const input = document.createElement("input")
+                const tds = tr.children
+                for (const eachtd of tds) {
+                    eachtd.appendChild(input)
+                }
+            }
+            for(let n = 0; n < 5; n++){
+                createatd(n)
+            }
+            const tds = tr.children
+            tds[2].firstElementChild.type = "number"
+            tds[0].firstElementChild.placeholder = "Course Name"
+            tds[1].firstElementChild.placeholder = "Course Code"
+            tds[2].firstElementChild.placeholder = "Course Unit"
+            tds[3].firstElementChild.placeholder = "Exam/test Date"
+            tds[4].firstElementChild.placeholder = "Exam/test Time"
+            generateBtn.addEventListener("click", () => {
+                for(let n = 0; n < 5; n++){
+                    tds[n].innerHTML = tds[n].firstElementChild.value;
+                }
+            })
+            return;
+        })
+        removeBtn.addEventListener("click", () => {
+            const trs = table.getElementsByTagName("tr")
+            table.removeChild(trs[trs.length - 1])
+            return;
+        })
+    </script>
+</body>
+</html>

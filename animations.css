@@ -1,0 +1,74 @@
+/* EARTH ANIMATION DESKTOP*/
+@keyframes earth {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* ON SCROLL EFFECTS ANIMATION DESKTOP*/
+@keyframes onScrollEffectLeft {
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+@keyframes onScrollEffectRight {
+    from{
+        transform: translateX(400px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+
+/* CARDS ANIMATION DESKTOP*/
+@keyframes cards {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+
+/* WHYIMAGES ANIMATION DESKTOP*/
+@keyframes whyImages{
+    0%{
+        transform: translateY(0px);
+        }
+    50%{
+        transform: translateY(15px);
+        }
+    100%{
+        transform: translateY(15px);
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+@media screen and (max-width: 770px) {
+    /* ON SCROLL EFFECTS ANIMATION MOBILE*/
+    @keyframes onScrollEffectLeft {
+        from{
+            transform: translateX(-200px);
+        }
+        to{
+            transform: translate(0px);
+        }
+    }
+    @keyframes onScrollEffectRight {
+        from{
+            transform: translateX(200px);
+        }
+        to{
+            transform: translate(0px);
+        }
+    }
+}

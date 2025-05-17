@@ -1,0 +1,32 @@
+/* LOADING PAGE DESKTOP & MOBILE*/
+div#intro{
+    width: 80%;
+    margin: 100px auto;
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+div#progress h1{
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+div#progress progress{
+    width: 220px;
+    margin-bottom: 100px;
+}
+div#intro a, h3 a:hover{
+    color: pink;
+}
+div#intro h3{
+    text-align: center; 
+    margin-bottom: 10px;
+    color: skyblue;
+}
+div#intro h3 a{
+    color: darkred"
+}
+div#intro h2{
+    text-align: center;
+    color: skyblue;
+}
